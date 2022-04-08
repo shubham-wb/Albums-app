@@ -2,14 +2,41 @@ import React, { useState } from "react";
 import "../public/main.css";
 
 export default function AlbumList(props) {
-  let [prev, setprev] = useState(0);
-  let [edit, setEdit] = useState({
+
+  //state for implementing next and prev button 
+  let [prev, setprev] = useState(0); //state for lower limit  
+  let [next, setNext] = useState(10); // state for upper limit
+
+  //state for implementing edit button 
+  let [edit, setEdit] = useState({  
     type: false,
     id: 0
   });
-  let [next, setNext] = useState(10);
   let length = props.data.length;
 
+//function to update entries of album to displayed 
+//<------------------------------------------------------------------->
+  function prevBtn() {
+    if (prev >= 10 && prev <= length) {
+      setprev((prevState) => prevState - 10);
+      setNext((prevState) => prevState - 10);
+    }
+  }
+
+  function nextBtn() {
+    console.log(prev);
+    console.log(next);
+    if (prev >= 0 && next <= length - 10) {
+      setprev((prevState) => prevState + 10);
+      setNext((prevState) => prevState + 10);
+    }
+  }
+//<------------------------------------------------------------------->
+
+
+
+
+  //function to handle update post 
   function handleUpdateAlbum(id) {
     const input = document.getElementById("update-input");
 
@@ -35,32 +62,15 @@ export default function AlbumList(props) {
         id: 0
       })
     );
-    alert("Album Updated Succefully")
+    alert("Album Updated Succefully");
   }
-
+//function to handle delete post 
   function handleDeleteAlbum(id) {
     fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
       method: "DELETE"
     });
-    alert("Album Deleted")
+    alert("Album Deleted");
   }
-
-  function prevBtn() {
-    if (prev >= 10 && prev <= length) {
-      setprev((prevState) => prevState - 10);
-      setNext((prevState) => prevState - 10);
-    }
-  }
-
-  function nextBtn() {
-    console.log(prev);
-    console.log(next);
-    if (prev >= 0 && next <= length - 10) {
-      setprev((prevState) => prevState + 10);
-      setNext((prevState) => prevState + 10);
-    }
-  }
-
   return (
     <>
       <ul className="album-list">

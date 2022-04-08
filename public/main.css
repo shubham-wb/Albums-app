@@ -61,6 +61,7 @@ body {
   list-style-type: none;
 }
 .album-list li {
+  font-size: 0.7rem;
   display: flex;
   align-items: center;
   background-color: rgba(255, 105, 180, 0.267);
@@ -78,7 +79,6 @@ body {
   width: 68%;
   margin-left: 30px;
   padding: 7px 3px;
-
   text-transform: capitalize;
 }
 .navigation {
@@ -96,6 +96,7 @@ body {
   color: white;
 }
 .add-albums {
+  margin-left: 10px;
   height: 300px;
   width: 250px;
   display: flex;
@@ -160,4 +161,69 @@ button img {
   border-radius: 0px 10px 10px 0px;
   background: black;
   color: white;
+}
+
+/* Mobile view  */
+@media only screen and (max-width: 700px) and (min-width: 300px) {
+  .add-albums {
+    width: 90%;
+    margin-left: 3%;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .albums-container {
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  .album-list {
+    margin-top: 50px;
+    margin-left: 6px;
+  }
+  .album-list li {
+    width: 120%;
+    background-color: rgba(255, 105, 180, 0.267);
+    margin-top: 2px;
+    height: 18%;
+  }
+
+  #update-btn {
+    height: 47%;
+  }
+
+  .id {
+    margin-left: 10px;
+    padding: 5px 7px;
+    background-color: yellow;
+    border-radius: 50%;
+  }
+  .title {
+    width: 48%;
+    margin-left: 5px;
+    padding: 7px 3px;
+    text-transform: capitalize;
+  }
+  .edit-btn {
+    width: 30%;
+  }
+
+  .edit-btn button {
+    margin-left: 4px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+/* Tablet View  */
+@media only screen and (max-width: 1200px) {
+  .edit-btn {
+    width: 30%;
+  }
+  .edit-btn button {
+    margin-left: 4px;
+    height: 20px;
+
+    width: 30px;
+  }
 }

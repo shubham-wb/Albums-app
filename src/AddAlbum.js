@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "../public/main.css";
 
 export default function AddAlbum() {
-  // function for adding a contact
+  //state 
   let [album, setAlbum] = useState();
+
+  // function for adding an album
+
+
   function handleAddAlbums() {
     const title = document.getElementById("title");
-
     fetch("https://jsonplaceholder.typicode.com/albums", {
       method: "POST",
       body: JSON.stringify({
@@ -40,7 +43,7 @@ export default function AddAlbum() {
     </div>
   );
 }
-
+//styles object for album
 const styles = {
   addAlbums: {
     backgroundColor: "white",
