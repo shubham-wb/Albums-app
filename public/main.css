@@ -1,0 +1,163 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(119, 185, 206, 0.7);
+}
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+.header {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 9%;
+  background: white;
+  font-size: 1.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px -6px 10px 3px gray;
+}
+
+.header img {
+  margin: 0px 12px;
+  height: 30px;
+  width: 30px;
+}
+
+.main {
+  height: 89%;
+  display: flex;
+  flex-direction: row;
+}
+
+.add-albums {
+  margin-top: 15px;
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  height: 50%;
+}
+.albums-container {
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+.album-list {
+  width: 80%;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0px;
+  height: 80%;
+  list-style-type: none;
+}
+.album-list li {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 105, 180, 0.267);
+  margin-top: 2px;
+  height: 10%;
+}
+
+.id {
+  margin: 20px;
+  padding: 5px 7px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.title {
+  width: 68%;
+  margin-left: 30px;
+  padding: 7px 3px;
+
+  text-transform: capitalize;
+}
+.navigation {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation button {
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+}
+.add-albums {
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-albums h2 {
+  height: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: orange;
+  width: 80%;
+}
+.row {
+  height: 90%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col {
+  margin-top: 20px;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+}
+input[type="submit"] {
+  padding: 6px 10px;
+  background: black;
+  color: white;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 15%;
+}
+
+.edit-btn button {
+  margin-left: 4px;
+  height: 50%;
+  width: 30%;
+}
+button img {
+  height: 100%;
+  width: 100%;
+}
+
+#update-input {
+  width: 60%;
+  height: 10%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#update-btn {
+  height: 70%;
+  border-radius: 0px 10px 10px 0px;
+  background: black;
+  color: white;
+}
